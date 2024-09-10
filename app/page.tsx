@@ -1,15 +1,15 @@
-// import Blogs from "./components/landing/blogs/blogs"
-// import Features from "./components/landing/features"
-// import Figures from "./components/landing/figures"
+import Blogs from "./components/blogs"
+import Features from "./components/features"
+import Figures from "./components/figures"
 import Intro from "./components/intro"
 
 const Home = () => {
   return (
     <main className="bg-white">
       <Intro />
-      {/* <Features /> */}
-      {/* <Figures /> */}
-      {/* <Blogs /> */}
+      <Features />
+      <Figures />
+      <Blogs />
     </main>
   )
 }
