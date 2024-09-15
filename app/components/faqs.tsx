@@ -4,6 +4,7 @@ import Image from "next/image"
 import { FaArrowRight } from "react-icons/fa"
 import Accordions from "./accordion"
 import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
 const Faqs = () => {
   const ref1 = useRef(null);
@@ -70,13 +71,16 @@ const Faqs = () => {
           We Are Here Tp Answer All Your Questions
         </h1>
         <Accordions />
-        <button
-          ref={ref3} className={`${isVisible3 ? 'showFaq' : ""} mt-10 px-5 py-3 text-base font-semibold text-white bg-[#0066cc] border border-transparent rounded-md shadow-sm hover:bg-white hover:text-[#0066cc] transition-colors duration-500 ease-in-out flex items-center gap-3`}
-          type="button"
-        >
-          Ask Question
-          <FaArrowRight />
-        </button>
+        <Link href='/faqs'>
+          <button
+            ref={ref3}
+            className={`${isVisible3 ? 'showFaq' : ""} mt-10 px-5 py-3 text-base font-semibold text-white bg-[#0066cc] border border-transparent rounded-md shadow-sm hover:bg-white hover:text-[#0066cc] transition-colors duration-500 ease-in-out flex items-center gap-3`}
+            type="button"
+          >
+            Ask Question
+            <FaArrowRight />
+          </button>
+        </Link>
       </div>
       <div className="flex-none w-[380px]">
         <Image
